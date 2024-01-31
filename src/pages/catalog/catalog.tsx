@@ -1,5 +1,6 @@
 import {ReactElement} from 'react';
 import {Helmet} from 'react-helmet-async';
+import {Breadcrumbs} from '../../components/breadcrumbs/breadcrumbs.tsx';
 
 export function Catalog(): ReactElement {
   return (
@@ -7,7 +8,12 @@ export function Catalog(): ReactElement {
       <Helmet>
         <title>Каталог | Главная страница</title>
       </Helmet>
-      <h1>Здесь будет каталог (главная страница)</h1>
+      <Breadcrumbs/>
+      <section className="catalog">
+        <div className="container">
+          <h1 className="title title--h2">Каталог фото- и видеотехники</h1>
+        </div>
+      </section>
     </main>
   );
 }
